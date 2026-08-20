@@ -90,8 +90,11 @@ leakage checks in [data/processed/feature_report.json](data/processed/feature_re
 
 ## 6. Prediction
 
-The target is `answered_next_call`: `1` when the current canonical call outcome
-is `ANSWERED`, otherwise `0`. The 16 pre-call features include prior attempt
+The target column `answered_next_call` is `1` when the current canonical call
+outcome is `ANSWERED`, otherwise `0`. Despite the column name, the model
+predicts the outcome of the current labeled call — not a future call — using
+features available strictly before that call. The 16 pre-call features include
+prior attempt
 count, previous outcome, account/campaign/vendor/hour answer rates, recent
 campaign rate, historical talk-time averages, attempt number, time fields,
 campaign ID, and vendor ID.
