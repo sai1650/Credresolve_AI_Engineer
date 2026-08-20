@@ -1,0 +1,250 @@
+{
+  "calibration_results": {
+    "test": {
+      "actual_rate_by_bin": [
+        0.20075997466751108,
+        0.20075997466751108,
+        0.19696010132995567,
+        0.18314321926489227,
+        0.2026599113362888,
+        0.2039265357821406,
+        0.19898605830164764,
+        0.18809373020899303,
+        0.1830272324255858,
+        0.181760607979734
+      ],
+      "calibration_error": 0.30825931682211943,
+      "number_of_bins": 10,
+      "probability_mean_by_bin": [
+        0.4435529249691469,
+        0.46665295953533437,
+        0.479643349144708,
+        0.4897173150762407,
+        0.4986274974115756,
+        0.5071590216792802,
+        0.5157635911508835,
+        0.525252436165777,
+        0.5368586068415676,
+        0.5594428122109409
+      ]
+    },
+    "validation": {
+      "actual_rate_by_bin": [
+        0.2085737840065952,
+        0.21022258862324814,
+        0.19703215169002472,
+        0.19471947194719472,
+        0.20692497938994228,
+        0.21434460016488047,
+        0.20627062706270627,
+        0.19455894476504534,
+        0.20032976092333057,
+        0.20692497938994228
+      ],
+      "calibration_error": 0.29828089430609495,
+      "number_of_bins": 10,
+      "probability_mean_by_bin": [
+        0.4461265051181302,
+        0.4679258121312562,
+        0.4796658554549547,
+        0.48957432687332036,
+        0.4982960185340706,
+        0.5067566950488612,
+        0.5154392651928708,
+        0.525071080632303,
+        0.5361191009509254,
+        0.5577361710871666
+      ]
+    }
+  },
+  "features_used": [
+    "previous_attempt_count",
+    "time_since_previous_call_sec",
+    "account_answer_rate",
+    "campaign_answer_rate",
+    "vendor_answer_rate",
+    "hour_answer_rate",
+    "recent_campaign_answer_rate",
+    "historical_average_talk_time_sec",
+    "campaign_average_talk_time_sec",
+    "vendor_average_talk_time_sec",
+    "attempt_no",
+    "hour_of_day",
+    "day_of_week",
+    "previous_outcome",
+    "campaign_id",
+    "vendor_id"
+  ],
+  "metrics": {
+    "test": {
+      "accuracy": 0.47548771218647073,
+      "actual_answer_rate": 0.19400810742335953,
+      "brier_score": 0.25278400556712016,
+      "calibration": {
+        "actual_rate_by_bin": [
+          0.20075997466751108,
+          0.20075997466751108,
+          0.19696010132995567,
+          0.18314321926489227,
+          0.2026599113362888,
+          0.2039265357821406,
+          0.19898605830164764,
+          0.18809373020899303,
+          0.1830272324255858,
+          0.181760607979734
+        ],
+        "calibration_error": 0.30825931682211943,
+        "number_of_bins": 10,
+        "probability_mean_by_bin": [
+          0.4435529249691469,
+          0.46665295953533437,
+          0.479643349144708,
+          0.4897173150762407,
+          0.4986274974115756,
+          0.5071590216792802,
+          0.5157635911508835,
+          0.525252436165777,
+          0.5368586068415676,
+          0.5594428122109409
+        ]
+      },
+      "f1": 0.2798504217758066,
+      "log_loss": 0.6987411022266833,
+      "pr_auc": 0.18954760382445257,
+      "precision": 0.19073020388809864,
+      "predicted_probability_mean": 0.5022669914487338,
+      "recall": 0.52530199151159,
+      "roc_auc": 0.4910646688051251
+    },
+    "validation": {
+      "accuracy": 0.48161279683377306,
+      "actual_answer_rate": 0.20399076517150397,
+      "brier_score": 0.2524622272432194,
+      "calibration": {
+        "actual_rate_by_bin": [
+          0.2085737840065952,
+          0.21022258862324814,
+          0.19703215169002472,
+          0.19471947194719472,
+          0.20692497938994228,
+          0.21434460016488047,
+          0.20627062706270627,
+          0.19455894476504534,
+          0.20032976092333057,
+          0.20692497938994228
+        ],
+        "calibration_error": 0.29828089430609495,
+        "number_of_bins": 10,
+        "probability_mean_by_bin": [
+          0.4461265051181302,
+          0.4679258121312562,
+          0.4796658554549547,
+          0.48957432687332036,
+          0.4982960185340706,
+          0.5067566950488612,
+          0.5154392651928708,
+          0.525071080632303,
+          0.5361191009509254,
+          0.5577361710871666
+        ]
+      },
+      "f1": 0.2946258274430607,
+      "log_loss": 0.698094583129563,
+      "pr_auc": 0.20306418211815136,
+      "precision": 0.20391365118807267,
+      "predicted_probability_mean": 0.5022710442315199,
+      "recall": 0.5307194826192401,
+      "roc_auc": 0.49761936821627334
+    }
+  },
+  "model_parameters": {
+    "algorithm": "LogisticRegression",
+    "categorical_features": [
+      "previous_outcome",
+      "campaign_id",
+      "vendor_id"
+    ],
+    "class_weight": "balanced",
+    "numeric_features": [
+      "previous_attempt_count",
+      "time_since_previous_call_sec",
+      "account_answer_rate",
+      "campaign_answer_rate",
+      "vendor_answer_rate",
+      "hour_answer_rate",
+      "recent_campaign_answer_rate",
+      "historical_average_talk_time_sec",
+      "campaign_average_talk_time_sec",
+      "vendor_average_talk_time_sec",
+      "attempt_no",
+      "hour_of_day",
+      "day_of_week"
+    ],
+    "random_state": 42
+  },
+  "recommendation": "Keep the statistical estimator primary; ML does not improve probability quality.",
+  "statistical_baseline_metrics": {
+    "test": {
+      "accuracy": 0.8059918925766405,
+      "actual_answer_rate": 0.19400810742335953,
+      "brier_score": 0.15639212551836615,
+      "calibration": {
+        "actual_rate_by_bin": [
+          0.19400810742335953
+        ],
+        "calibration_error": 0.004812882815930841,
+        "number_of_bins": 1,
+        "probability_mean_by_bin": [
+          0.19882099023929037
+        ]
+      },
+      "f1": 0.0,
+      "log_loss": 0.49205600231417834,
+      "pr_auc": 0.19400810742335953,
+      "precision": 0.0,
+      "predicted_probability_mean": 0.19882099023934546,
+      "recall": 0.0,
+      "roc_auc": 0.5
+    },
+    "validation": {
+      "accuracy": 0.7960092348284961,
+      "actual_answer_rate": 0.20399076517150397,
+      "brier_score": 0.1624052594690975,
+      "calibration": {
+        "actual_rate_by_bin": [
+          0.20399076517150397
+        ],
+        "calibration_error": 0.005169774932203081,
+        "number_of_bins": 1,
+        "probability_mean_by_bin": [
+          0.1988209902393009
+        ]
+      },
+      "f1": 0.0,
+      "log_loss": 0.5059686280886684,
+      "pr_auc": 0.20399076517150397,
+      "precision": 0.0,
+      "predicted_probability_mean": 0.19882099023934546,
+      "recall": 0.0,
+      "roc_auc": 0.5
+    }
+  },
+  "target_distribution": {
+    "overall": {
+      "0": 72120,
+      "1": 17880
+    },
+    "train": {
+      "0": 49741,
+      "1": 12343
+    }
+  },
+  "test_rows": 15788,
+  "training_rows": 62084,
+  "training_timestamp": "2026-08-20T19:39:55.851977+00:00",
+  "validation_rows": 12128,
+  "warnings": [
+    "This is an offline baseline and is not production-ready.",
+    "Missing historical values are imputed in preprocessing."
+  ]
+}

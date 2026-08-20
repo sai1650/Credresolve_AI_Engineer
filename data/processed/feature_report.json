@@ -1,0 +1,65 @@
+{
+  "date_range": {
+    "end": "2026-08-12T15:43:05+00:00",
+    "start": "2025-12-29T06:52:37+00:00"
+  },
+  "duplicates_removed": 0,
+  "feature_names": [
+    "previous_attempt_count",
+    "time_since_previous_call_sec",
+    "previous_outcome",
+    "account_answer_rate",
+    "campaign_answer_rate",
+    "vendor_answer_rate",
+    "hour_answer_rate",
+    "recent_campaign_answer_rate",
+    "historical_average_talk_time_sec",
+    "campaign_average_talk_time_sec",
+    "vendor_average_talk_time_sec",
+    "attempt_no",
+    "hour_of_day",
+    "day_of_week",
+    "campaign_id",
+    "vendor_id"
+  ],
+  "input_rows": 245000,
+  "leakage_checks": {
+    "current_duration_excluded": true,
+    "current_outcome_excluded": true,
+    "future_events_excluded": true,
+    "future_external_datasets_used": false,
+    "strictly_before_event_time": true
+  },
+  "missing_values": {
+    "account_answer_rate": 0,
+    "attempt_no": 0,
+    "campaign_answer_rate": 0,
+    "campaign_average_talk_time_sec": 120,
+    "campaign_id": 0,
+    "day_of_week": 0,
+    "historical_average_talk_time_sec": 28408,
+    "hour_answer_rate": 0,
+    "hour_of_day": 0,
+    "previous_attempt_count": 0,
+    "previous_outcome": 0,
+    "recent_campaign_answer_rate": 0,
+    "time_since_previous_call_sec": 28408,
+    "vendor_answer_rate": 0,
+    "vendor_average_talk_time_sec": 15,
+    "vendor_id": 0
+  },
+  "number_of_features": 16,
+  "number_of_rows": 90000,
+  "rows_without_historical_information": 12823,
+  "smoothing": {
+    "alpha": 5.0,
+    "default_prior_rate": 0.5,
+    "description": "Rates use only calls strictly before the prediction event."
+  },
+  "target_distribution": {
+    "0": 72120,
+    "1": 17880
+  },
+  "unknown_outcome_rows_excluded": 0,
+  "usable_rows": 90000
+}
