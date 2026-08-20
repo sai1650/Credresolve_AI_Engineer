@@ -243,7 +243,7 @@ python -m pytest -q
 Final measured result:
 
 ```text
-72 passed
+77 passed
 ```
 
 The API has tests covering dashboard summary, provider health, and scenario
